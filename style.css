@@ -276,5 +276,7 @@ html {
 
 /* ====== About Text ====== */
 #about p {
-  text-align: justify;
+  #contact p {
+  text-align: left; /* یا center */
+}
 }
