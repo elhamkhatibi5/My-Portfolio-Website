@@ -264,6 +264,9 @@ html {
   background-color: #ffcc00;
   color: #333;
   padding: 1rem;
+  #about p {
+  text-align: justify;
+}
   border-radius: 10px;
   text-align: center;
 }
