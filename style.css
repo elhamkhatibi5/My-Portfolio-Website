@@ -1,99 +1,32 @@
-/* ====== Reset ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ====== Body ====== */
-body {
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1rem;
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* ====== Navbar ====== */
-.navbar {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  border-radius: 0 0 16px 16px;
-}
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1abc9c;
-  text-decoration: none;
-}
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-.navbar .nav-links li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-.navbar .nav-links li a:hover,
-.navbar .nav-links li a.active {
-  color: #1abc9c;
-}
-
-/* ====== Hero Section ====== */
-.hero {
-  text-align: center;
-  width: 100%;
-  max-width: 1100px;
-  margin: 2rem auto 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ====== Spinning Ring & Profile Picture ====== */
+/* === تنظیمات اصلی برای رینگ و عکس پروفایل === */
 .profile-pic-container {
-  width: 200px;
-  height: 200px;
+  --size: 180px; /* اندازه پیش‌فرض رینگ و عکس */
+  width: var(--size);
+  height: var(--size);
   position: relative;
-  margin-bottom: 1.5rem;
+  margin: 2rem auto; /* مرکز چین و فاصله از بالا و پایین */
 }
 
+/* رینگ چرخان دور عکس */
 .profile-pic-container::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
-  height: 200px;
+  width: var(--size);
+  height: var(--size);
   border: 5px solid transparent;
-  border-top: 5px solid #00bfff;
+  border-top: 5px solid #1abc9c; /* رنگ رینگ */
   border-radius: 50%;
-  animation: spin 4s linear infinite;
-  box-shadow: 0 0 15px #00bfff;
+  animation: spin 3.5s linear infinite;
+  box-shadow: 0 0 15px #1abc9c;
   z-index: 0;
 }
 
+/* عکس پروفایل داخل رینگ */
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: var(--size);
+  height: var(--size);
   border-radius: 50%;
   object-fit: cover;
   position: relative;
@@ -101,207 +34,85 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* ====== Animation ====== */
+/* انیمیشن چرخش رینگ */
 @keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
 }
 
-/* ====== Hero Text ====== */
-.hero h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
-}
-.hero p {
-  font-size: 1.1rem;
-  color: #ccc;
-  padding: 0 1rem;
-}
-
-/* ====== Portfolio Section ====== */
-.portfolio-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-  max-width: 1100px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}
-
-/* ====== Project Box ====== */
-.project {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
-  padding: 1.5rem;
+/* === فرم تماس === */
+.contact-form {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 25px 30px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(30, 60, 114, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.project img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-.project h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-.project p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 14px 28px rgba(30, 60, 114, 0.6);
+  box-sizing: border-box;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* ====== Button ====== */
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #1abc9c;
+/* برچسب‌های فرم */
+.contact-form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #1abc9c;
+  font-size: 1rem;
+}
+
+/* فیلدهای ورودی و textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1.3rem;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255,255,255,0.2);
   color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  font-size: 1rem;
+  box-sizing: border-box;
   transition: background-color 0.3s ease;
 }
-.btn:hover {
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: rgba(255,255,255,0.35);
+  outline: none;
+  box-shadow: 0 0 8px #1abc9c;
+  color: #fff;
+}
+
+/* دکمه ارسال */
+.contact-form button {
+  width: 100%;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 14px 0;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 12px rgba(26, 188, 156, 0.7);
+}
+
+.contact-form button:hover {
   background-color: #17a589;
 }
 
-/* ====== Footer ====== */
-footer {
-  margin-top: auto;
-  text-align: center;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 100%;
-  backdrop-filter: blur(5px);
-  color: #eee;
-  border-radius: 16px 16px 0 0;
-}
-
-/* ====== Responsive Fix ====== */
-@media (max-width: 720px) {
-  .portfolio-section {
-    grid-template-columns: 1fr;
-  }
-  .hero-content {
-    padding: 0 1rem;
-  }
-  .profile-pic-container {
-    width: 180px;
-    height: 180px;
-  }
-  .profile-pic-container::before {
-    width: 180px;
-    height: 180px;
-  }
-  .profile-pic {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-/* ====== Mobile Very Small ====== */
-@media (max-width: 480px) {
-  body {
-    padding: 1rem;
-  }
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .navbar .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-  .hero p {
-    font-size: 1rem;
-    padding: 0;
-  }
-  .profile-pic-container {
-    width: 140px;
-    height: 140px;
-  }
-  .profile-pic-container::before {
-    width: 140px;
-    height: 140px;
-  }
-  .profile-pic {
-    width: 140px;
-    height: 140px;
-  }
-  .btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-  footer {
-    font-size: 0.9rem;
-  }
-}
-
-/* ====== Large Screen ====== */
-@media (min-width: 1400px) {
-  .hero {
-    max-width: 900px;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1.3rem;
-  }
-  .profile-pic-container {
-    width: 220px;
-    height: 220px;
-  }
-  .profile-pic-container::before {
-    width: 220px;
-    height: 220px;
-  }
-  .profile-pic {
-    width: 220px;
-    height: 220px;
-  }
-  .btn {
-    font-size: 1rem;
-  }
-}
-
-/* ====== Contact Form Responsive ====== */
+/* واکنش‌گرایی برای موبایل */
 @media (max-width: 600px) {
+  .profile-pic-container {
+    --size: 140px;
+  }
   .contact-form {
-    width: 90% !important;
-    margin: 0 auto !important;
-    padding: 10px !important;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 20px;
   }
-  .form-box {
-    display: flex !important;
-    flex-direction: column !important;
-    margin-bottom: 15px !important;
-  }
-  label {
-    margin-bottom: 5px !important;
-    font-size: 1rem !important;
-  }
-  input, textarea
+}
