@@ -68,20 +68,21 @@ body {
   align-items: center;
 }
 
-/* ====== Spinning Ring ====== */
+/* ====== Spinning Ring & Profile Picture ====== */
 .profile-pic-container {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   position: relative;
   margin-bottom: 1.5rem;
 }
+
 .profile-pic-container::before {
   content: '';
   position: absolute;
-  top: -12px;
-  left: -12px;
-  width: 204px;
-  height: 204px;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
   border: 5px solid transparent;
   border-top: 5px solid #00bfff;
   border-radius: 50%;
@@ -89,9 +90,10 @@ body {
   box-shadow: 0 0 15px #00bfff;
   z-index: 0;
 }
+
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   position: relative;
@@ -202,6 +204,18 @@ footer {
   .hero-content {
     padding: 0 1rem;
   }
+  .profile-pic-container {
+    width: 180px;
+    height: 180px;
+  }
+  .profile-pic-container::before {
+    width: 180px;
+    height: 180px;
+  }
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 /* ====== Mobile Very Small ====== */
@@ -230,8 +244,8 @@ footer {
     height: 140px;
   }
   .profile-pic-container::before {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
   }
   .profile-pic {
     width: 140px;
@@ -258,16 +272,16 @@ footer {
     font-size: 1.3rem;
   }
   .profile-pic-container {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
   .profile-pic-container::before {
     width: 220px;
     height: 220px;
   }
   .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
   .btn {
     font-size: 1rem;
@@ -290,21 +304,4 @@ footer {
     margin-bottom: 5px !important;
     font-size: 1rem !important;
   }
-  input, textarea {
-    font-size: 1rem !important;
-    padding: 10px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  .btn {
-    width: 100% !important;
-    padding: 12px !important;
-    font-size: 1.1rem !important;
-    cursor: pointer;
-  }
-  /* عکس پروفایل کوچکتر شود */
-  .profile-pic {
-    width: 100px !important;
-    height: 100px !important;
-  }
-}
+  input, textarea
