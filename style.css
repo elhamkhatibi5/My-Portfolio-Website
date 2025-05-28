@@ -54,7 +54,9 @@ body {
 
 .navbar .nav-links li {
   min-width: 80px;
-  text-align: center;
+  #contact p {
+  text-align: justify;
+  };
 }
 
 .navbar .nav-links li a {
