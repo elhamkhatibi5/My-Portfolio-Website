@@ -218,7 +218,7 @@ footer {
 /* ====== Contact Section ====== */
 .contact {
   max-width: 1100px;
-  margin: 5rem auto 2rem auto; /* اینجا margin-top رو بیشتر کردم */
+  margin: 6rem auto 2rem auto; /* اینجا margin-top رو بیشتر کردم */
   padding: 2rem 1rem;
   text-align: justify;
   background-color: rgba(255, 255, 255, 0.05);
