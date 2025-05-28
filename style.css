@@ -8,13 +8,15 @@
 /* Body */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* گاردین آبی خیره‌کننده */
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -189,9 +191,94 @@ footer {
   border-radius: 16px 16px 0 0;
 }
 
-/* Responsive */
+/* Responsive Fix */
 @media (max-width: 720px) {
   .portfolio-section {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ✅ ریسپانسیو برای موبایل‌های خیلی کوچک */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .profile-pic-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-pic-container::before {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* ✅ برای صفحه‌نمایش‌های خیلی بزرگ */
+@media (min-width: 1400px) {
+  .hero {
+    max-width: 900px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .profile-pic-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-pic-container::before {
+    width: 220px;
+    height: 220px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .btn {
+    font-size: 1rem;
   }
 }
