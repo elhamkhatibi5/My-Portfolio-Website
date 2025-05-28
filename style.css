@@ -25,6 +25,7 @@ body {
   background: linear-gradient(90deg, rgba(26,188,156,0.2), rgba(44,83,100,0.6));
   padding: 1rem 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(10px);
@@ -43,20 +44,26 @@ body {
 }
 
 .navbar .nav-links {
-  list-style: none; /* حذف بولت‌ها */
-  display: flex;    /* افقی کردن آیتم‌ها */
-  gap: 1.5rem;      /* فاصله بین لینک‌ها */
-  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
   margin: 0;
+}
+
+.navbar .nav-links li {
+  min-width: 80px;
+  text-align: center;
 }
 
 .navbar .nav-links li a {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  transition: color 0.3s ease;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.7rem;
   border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .navbar .nav-links li a:hover,
@@ -67,20 +74,20 @@ body {
 
 /* ====== Hero Section ====== */
 .hero {
-  text-align: center;
-  width: 100%;
   max-width: 1100px;
-  margin: 2rem auto 0 auto;
+  width: 100%;
+  text-align: center;
+  margin: 2rem auto;
   padding: 0 1rem;
-  box-sizing: border-box;
 }
+
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ====== Spinning Ring & Profile Picture ====== */
+/* ====== Spinning Ring & Profile ====== */
 .profile-pic-container {
   width: 200px;
   height: 200px;
@@ -101,7 +108,6 @@ body {
   animation: spin 4s linear infinite;
   box-shadow: 0 0 15px #00bfff;
   z-index: 0;
-  box-sizing: border-box;
 }
 
 .profile-pic {
@@ -111,11 +117,10 @@ body {
   object-fit: cover;
   position: relative;
   z-index: 1;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   margin: 5%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* ====== Animation ====== */
 @keyframes spin {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
@@ -126,8 +131,8 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #ffffff;
 }
+
 .hero p {
   font-size: 1.1rem;
   color: #ccc;
@@ -139,15 +144,13 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin: 3rem auto 2rem auto;
   max-width: 1100px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0 1rem;
 }
 
-/* ====== Project Box ====== */
+/* ====== Project ====== */
 .project {
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
@@ -155,28 +158,28 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(30, 60, 114, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
+
 .project img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 1rem;
   object-fit: cover;
+  margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
+
 .project h2 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
+
 .project p {
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
+
 .project:hover {
   transform: translateY(-10px);
   box-shadow: 0 14px 28px rgba(30, 60, 114, 0.6);
@@ -194,6 +197,7 @@ body {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
+
 .btn:hover {
   background-color: #17a589;
 }
@@ -201,104 +205,16 @@ body {
 /* ====== Footer ====== */
 footer {
   margin-top: auto;
-  text-align: center;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   color: #eee;
   border-radius: 16px 16px 0 0;
 }
 
-/* ====== Responsive Fix ====== */
-@media (max-width: 720px) {
-  .portfolio-section {
-    grid-template-columns: 1fr;
-  }
-  .hero-content {
-    padding: 0 1rem;
-  }
-  .profile-pic-container {
-    width: 180px;
-    height: 180px;
-  }
-  .profile-pic-container::before {
-    width: 180px;
-    height: 180px;
-  }
-  .profile-pic {
-    width: 90%;
-    height: 90%;
-    margin: 5%;
-  }
-}
-
-/* ====== Mobile Very Small ====== */
-@media (max-width: 480px) {
-  body {
-    padding: 1rem;
-  }
-  .navbar {
-    flex-direction: row;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .navbar .nav-links {
-    flex-direction: row;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-  .hero p {
-    font-size: 1rem;
-    padding: 0;
-  }
-  .profile-pic-container {
-    width: 140px;
-    height: 140px;
-  }
-  .profile-pic-container::before {
-    width: 140px;
-    height: 140px;
-  }
-  .profile-pic {
-    width: 90%;
-    height: 90%;
-    margin: 5%;
-  }
-  .btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-  footer {
-    font-size: 0.9rem;
-  }
-}
-
-/* ====== Large Screen ====== */
-@media (min-width: 1400px) {
-  .hero {
-    max-width: 900px;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1.3rem;
-  }
-  .profile-pic-container {
-    width: 220px;
-    height: 220px;
-  }
-  .profile-pic-container::before {
-    width: 220px;
-    /* فاصله دادن به هدر */
-.navbar {
-  margin-bottom: 2rem;
-}
-
-/* تنظیمات بخش تماس */
+/* ====== Contact Section ====== */
 .contact {
   max-width: 1100px;
   margin: 3rem auto 2rem auto;
@@ -306,7 +222,6 @@ footer {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  box-sizing: border-box;
 }
 
 .contact img {
@@ -316,44 +231,29 @@ footer {
   margin-top: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  display: inline-block;
-}
-    .navbar .nav-links {
-  display: flex;
-  flex-wrap: wrap; /* اضافه شد */
-  gap: 1.5rem;
-  padding-left: 0;
-  margin: 0;
 }
 
-.navbar .nav-links li {
-  min-width: 80px;
-  flex: 1 1 auto;
-  text-align: center;
+/* ====== Media Queries ====== */
+@media (max-width: 720px) {
+  .hero h1 { font-size: 1.7rem; }
+  .hero p { font-size: 1rem; }
+  .profile-pic-container { width: 160px; height: 160px; }
+  .portfolio-section { grid-template-columns: 1fr; }
+  .navbar { flex-direction: column; align-items: flex-start; }
+  .navbar .nav-links { flex-direction: column; width: 100%; }
+  .navbar .nav-links li { width: 100%; text-align: left; }
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar .nav-links {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar .nav-links li {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
+@media (max-width: 480px) {
+  body { padding: 1rem; }
+  .profile-pic-container { width: 140px; height: 140px; }
+  .hero h1 { font-size: 1.4rem; }
+  .btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
+  footer { font-size: 0.85rem; }
 }
-    height: 220px;
-  }
-  .profile-pic {
-    width: 90%;
-    height: 90%;
-    margin: 5%;
-  }
-  .btn {
-    font-size:
+
+@media (min-width: 1400px) {
+  .hero h1 { font-size: 2.5rem; }
+  .hero p { font-size: 1.3rem; }
+  .profile-pic-container { width: 220px; height: 220px; }
+}
