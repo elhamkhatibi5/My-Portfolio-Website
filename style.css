@@ -1,11 +1,11 @@
-/* Reset */
+/* ====== Reset ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* ====== Body ====== */
 body {
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -17,10 +17,9 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  scroll-padding-top: 100px; /* برای اسکرول به انکرها */
 }
 
-/* Navbar */
+/* ====== Navbar ====== */
 .navbar {
   width: 100%;
   background: linear-gradient(90deg, rgba(26,188,156,0.2), rgba(44,83,100,0.6));
@@ -34,24 +33,76 @@ body {
   border-radius: 0 0 16px 16px;
   position: sticky;
   top: 0;
-  z-index: 1000; /* بالا بردم برای اطمینان */
+  z-index: 100;
 }
 
-/* Profile Pic Container (حلقه چرخشی) */
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav-links li {
+  min-width: 80px;
+  text-align: center;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active {
+  color: #1abc9c;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ====== Spinning Ring & Profile ====== */
 .profile-pic-container {
   width: 200px;
   height: 200px;
   position: relative;
-  margin: 2rem auto 1.5rem auto; /* فاصله بالا و پایین */
+  margin-bottom: 1.5rem;
   flex-shrink: 0;
-  z-index: 1;
 }
 
 .profile-pic-container::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 5px solid transparent;
   border-top: 5px solid #00bfff;
   border-radius: 50%;
@@ -71,23 +122,108 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* انیمیشن چرخش */
 @keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* Contact Section */
+/* ====== Hero Text ====== */
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+  padding: 0 1rem;
+}
+
+/* ====== Portfolio Section ====== */
+.portfolio-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem auto 2rem auto;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* ====== Project ====== */
+.project {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(30, 60, 114, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.project h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 28px rgba(30, 60, 114, 0.6);
+}
+
+/* ====== Button ====== */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #1abc9c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #17a589;
+}
+
+/* ====== Footer ====== */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: #eee;
+  border-radius: 16px 16px 0 0;
+}
+
+/* ====== Contact Section ====== */
 .contact {
   max-width: 1100px;
-  margin: 6rem auto 2rem auto; /* فاصله مناسب از بالا */
+  margin: 7rem auto 2rem auto; /* اینجا margin-top رو بیشتر کردم */
   padding: 2rem 1rem;
   text-align: justify;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   line-height: 1.6;
-  position: relative;
-  z-index: 0;
 }
 
 .contact img {
@@ -99,11 +235,11 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Media Queries */
+/* ====== Media Queries ====== */
 @media (max-width: 720px) {
   .hero h1 { font-size: 1.7rem; }
   .hero p { font-size: 1rem; }
-  .profile-pic-container { width: 160px; height: 160px; margin: 1.5rem auto 1rem auto; }
+  .profile-pic-container { width: 160px; height: 160px; }
   .portfolio-section { grid-template-columns: 1fr; }
   .navbar { flex-direction: column; align-items: flex-start; }
   .navbar .nav-links { flex-direction: column; width: 100%; }
@@ -122,4 +258,23 @@ body {
   .hero h1 { font-size: 2.5rem; }
   .hero p { font-size: 1.3rem; }
   .profile-pic-container { width: 220px; height: 220px; }
+}
+
+/* ====== Scroll Padding ====== */
+html {
+  scroll-padding-top: 100px;
+}
+
+/* ====== Special Box ====== */
+.special-box {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ====== About Text ====== */
+#about p {
+  text-align: justify;
 }
