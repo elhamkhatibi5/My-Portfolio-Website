@@ -293,6 +293,31 @@ footer {
   }
   .profile-pic-container::before {
     width: 220px;
+    /* فاصله دادن به هدر */
+.navbar {
+  margin-bottom: 2rem;
+}
+
+/* تنظیمات بخش تماس */
+.contact {
+  max-width: 1100px;
+  margin: 3rem auto 2rem auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.contact img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  display: inline-block;
+}
     height: 220px;
   }
   .profile-pic {
