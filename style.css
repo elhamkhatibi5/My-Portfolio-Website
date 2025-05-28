@@ -257,3 +257,6 @@ footer {
   .hero p { font-size: 1.3rem; }
   .profile-pic-container { width: 220px; height: 220px; }
 }
+html {
+  scroll-padding-top: 100px;
+}
