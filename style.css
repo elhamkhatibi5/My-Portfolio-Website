@@ -260,3 +260,10 @@ footer {
 html {
   scroll-padding-top: 100px;
 }
+.special-box {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
