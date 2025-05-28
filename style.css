@@ -288,3 +288,42 @@ footer {
     font-size: 1rem;
   }
 }
+/* ریسپانسیو کردن فرم تماس برای موبایل */
+@media (max-width: 600px) {
+  .contact-form {
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+  }
+
+  .form-box {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 15px !important;
+  }
+
+  label {
+    margin-bottom: 5px !important;
+    font-size: 1rem !important;
+  }
+
+  input, textarea {
+    font-size: 1rem !important;
+    padding: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .btn {
+    width: 100% !important;
+    padding: 12px !important;
+    font-size: 1.1rem !important;
+    cursor: pointer;
+  }
+
+  /* عکس پروفایل کوچکتر شود */
+  .profile-pic {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
