@@ -1,11 +1,11 @@
-/* Reset */
+/* ====== Reset ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* ====== Body ====== */
 body {
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar */
+/* ====== Navbar ====== */
 .navbar {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
@@ -53,7 +53,7 @@ body {
   color: #1abc9c;
 }
 
-/* Hero Section */
+/* ====== Hero Section ====== */
 .hero {
   text-align: center;
   width: 100%;
@@ -68,7 +68,7 @@ body {
   align-items: center;
 }
 
-/* Spinning Ring */
+/* ====== Spinning Ring ====== */
 .profile-pic-container {
   width: 180px;
   height: 180px;
@@ -78,14 +78,15 @@ body {
 .profile-pic-container::before {
   content: '';
   position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 200px;
-  height: 200px;
-  border: 4px solid transparent;
-  border-top: 4px solid #00bfff;
+  top: -12px;
+  left: -12px;
+  width: 204px;
+  height: 204px;
+  border: 5px solid transparent;
+  border-top: 5px solid #00bfff;
   border-radius: 50%;
-  animation: spin 3s linear infinite;
+  animation: spin 4s linear infinite;
+  box-shadow: 0 0 15px #00bfff;
   z-index: 0;
 }
 .profile-pic {
@@ -95,15 +96,16 @@ body {
   object-fit: cover;
   position: relative;
   z-index: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* Animation */
+/* ====== Animation ====== */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
 
-/* Hero Text */
+/* ====== Hero Text ====== */
 .hero h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
@@ -116,7 +118,7 @@ body {
   padding: 0 1rem;
 }
 
-/* Portfolio Section */
+/* ====== Portfolio Section ====== */
 .portfolio-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -129,7 +131,7 @@ body {
   padding: 0 1rem;
 }
 
-/* Project Box */
+/* ====== Project Box ====== */
 .project {
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
@@ -159,14 +161,12 @@ body {
   font-size: 0.95rem;
   line-height: 1.4;
 }
-
-/* Hover Animation */
 .project:hover {
   transform: translateY(-10px);
   box-shadow: 0 14px 28px rgba(30, 60, 114, 0.6);
 }
 
-/* Button */
+/* ====== Button ====== */
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -182,7 +182,7 @@ body {
   background-color: #17a589;
 }
 
-/* Footer */
+/* ====== Footer ====== */
 footer {
   margin-top: auto;
   text-align: center;
@@ -194,7 +194,7 @@ footer {
   border-radius: 16px 16px 0 0;
 }
 
-/* Responsive Fix */
+/* ====== Responsive Fix ====== */
 @media (max-width: 720px) {
   .portfolio-section {
     grid-template-columns: 1fr;
@@ -204,123 +204,104 @@ footer {
   }
 }
 
-/* ✅ ریسپانسیو برای موبایل‌های خیلی کوچک */
+/* ====== Mobile Very Small ====== */
 @media (max-width: 480px) {
   body {
     padding: 1rem;
   }
-
   .navbar {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
   }
-
   .navbar .nav-links {
     flex-direction: column;
     align-items: center;
   }
-
   .hero h1 {
     font-size: 1.5rem;
   }
-
   .hero p {
     font-size: 1rem;
     padding: 0;
   }
-
   .profile-pic-container {
     width: 140px;
     height: 140px;
   }
-
   .profile-pic-container::before {
     width: 160px;
     height: 160px;
   }
-
   .profile-pic {
     width: 140px;
     height: 140px;
   }
-
   .btn {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
-
   footer {
     font-size: 0.9rem;
   }
 }
 
-/* ✅ برای صفحه‌نمایش‌های خیلی بزرگ */
+/* ====== Large Screen ====== */
 @media (min-width: 1400px) {
   .hero {
     max-width: 900px;
   }
-
   .hero h1 {
     font-size: 2.5rem;
   }
-
   .hero p {
     font-size: 1.3rem;
   }
-
   .profile-pic-container {
     width: 200px;
     height: 200px;
   }
-
   .profile-pic-container::before {
     width: 220px;
     height: 220px;
   }
-
   .profile-pic {
     width: 200px;
     height: 200px;
   }
-
   .btn {
     font-size: 1rem;
   }
 }
-/* ریسپانسیو کردن فرم تماس برای موبایل */
+
+/* ====== Contact Form Responsive ====== */
 @media (max-width: 600px) {
   .contact-form {
     width: 90% !important;
     margin: 0 auto !important;
     padding: 10px !important;
   }
-
   .form-box {
     display: flex !important;
     flex-direction: column !important;
     margin-bottom: 15px !important;
   }
-
   label {
     margin-bottom: 5px !important;
     font-size: 1rem !important;
   }
-
   input, textarea {
     font-size: 1rem !important;
     padding: 10px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
-
   .btn {
     width: 100% !important;
     padding: 12px !important;
     font-size: 1.1rem !important;
     cursor: pointer;
   }
-
   /* عکس پروفایل کوچکتر شود */
   .profile-pic {
     width: 100px !important;
