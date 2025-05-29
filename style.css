@@ -237,13 +237,25 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* ====== About Text اصلاح شده ====== */
+/* ====== About Text ====== */
 #about p {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
   line-height: 1.6;
   word-wrap: break-word;
+}
+
+/* ====== Social Icons - Blue for All Pages ====== */
+.social-icons i,
+.social-icons a {
+  color: #00bfff !important;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover,
+.social-icons a:hover {
+  color: #1abc9c !important;
 }
 
 /* ====== Media Queries ====== */
@@ -268,10 +280,4 @@ footer {
 @media (min-width: 1400px) {
   .hero h1 { font-size: 2.5rem; }
   .hero p { font-size: 1.3rem; }
-}
-
-/* ====== اصلاح رنگ آیکون های اجتماعی فقط در صفحه پورتفولیو ====== */
-.portfolio-section footer .social-icons i,
-.portfolio-section footer .social-icons a {
-  color: #fff !important;  /* سفید کردن آیکون ها فقط داخل بخش portfolio */
 }
