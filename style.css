@@ -278,13 +278,10 @@ html {
 #about p {
   text-align: justify;
 }
-footer {
-  background-color: #f9f9f9;  /* خیلی روشن، هماهنگ با کل قالب */
-  color: #333333;             /* خاکستری تیره برای متن */
+.footer {
+  background-color: #f9f9f9;
+  padding: 20px 0 10px;
   text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
   border-top: 1px solid #ddd;
 }
 
@@ -293,12 +290,13 @@ footer {
 }
 
 .social-icons i {
-  font-size: 20px;
+  font-size: 24px;
+  color: #555;
   margin: 0 10px;
-  color: #555555;            /* رنگ اولیه آیکون‌ها */
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .social-icons i:hover {
-  color: #3b82f6;            /* آبی ملایم هنگام هاور */
+  color: #0077cc;
 }
