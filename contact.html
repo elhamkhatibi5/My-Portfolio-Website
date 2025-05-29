@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="index.html" class="logo">MyPortfolio</a>
     <ul class="nav-links">
@@ -19,20 +20,27 @@
     </ul>
   </nav>
 
+  <!-- Header Section -->
   <header class="hero">
     <div class="hero-content">
+      <div class="profile-pic-container">
+        <img src="profile-girl.jpg" alt="Profile Picture" class="profile-pic" />
+      </div>
       <section id="contact">
         <h2>Contact Me</h2>
-        <p>If you would like to get in touch, feel free to reach out via the platforms below or send me an email.</p>
-        <ul class="contact-info">
-          <li><i class="fas fa-envelope"></i> elham@example.com</li>
-          <li><i class="fas fa-phone"></i> +98 912 123 4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> Tehran, Iran</li>
-        </ul>
+        <p>If you’d like to get in touch, feel free to reach out via social media or send me a message below. I'm always open to new opportunities, collaborations, or just a friendly hello!</p>
+        
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </section>
     </div>
   </header>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="social-icons">
       <i class="fab fa-instagram"></i>
