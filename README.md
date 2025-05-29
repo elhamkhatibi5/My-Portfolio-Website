@@ -1,4 +1,4 @@
-Portfolio-Website Website
+My- Portfolio-Website 
 
 ## Theme / Inspiration
 This portfolio website is inspired by a clean, professional, and minimalist design to showcase my background as an Economics graduate and former Budget Manager, combined with my growing passion for computer science and web development.
