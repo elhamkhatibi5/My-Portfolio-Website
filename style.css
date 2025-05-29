@@ -205,13 +205,16 @@ body {
 /* ====== Footer ====== */
 footer {
   margin-top: auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-align: center;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(30, 30, 30, 0.9); /* تیره و شفاف */
   backdrop-filter: blur(5px);
-  color: #eee;
+  color: #f0f0f0; /* متن روشن */
   border-radius: 16px 16px 0 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); /* خط ملایم بالا */
+  font-size: 0.9rem;
+  user-select: none;
 }
 
 /* ====== Contact Section ====== */
@@ -264,16 +267,4 @@ footer {
 
 @media (min-width: 1400px) {
   .hero h1 { font-size: 2.5rem; }
-  .hero p { font-size: 1.3rem; }
-  .profile-pic-container { width: 220px; height: 220px; }
-}
-
-/* ====== Scroll Padding ====== */
-html {
-  scroll-padding-top: 100px;
-}
-
-/* ====== Special Box ====== */
-.special-box {
-  background-color: #ffcc00;
-  color: #333;
+  .hero p { font-size: 1.3
