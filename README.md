@@ -4,8 +4,8 @@ My- Portfolio-Website
 This portfolio website is inspired by a clean, professional, and minimalist design to showcase my background as an Economics graduate and former Budget Manager, combined with my growing passion for computer science and web development.
 
 ## Design Decisions
-- Used two Google Fonts: Montserrat for headings (modern and bold) and Open Sans for body text (readable and clean).
-- Color scheme is calm and professional with navy blue (#004d99) as primary color for navigation and accents.
+- Used two Google Fonts: Poppins headings (modern and bold) and Open Sans-Serif for body text (readable and clean).
+- Color scheme is calm and professional with navy blue (#004d99) as primary color for navigation and accents.Dark Slate gray and white color.
 - Responsive grid layout for projects using CSS Grid.
 - Hover effects on navigation links and project cards to improve interactivity.
 - Simple, semantic HTML structure for accessibility and SEO.
