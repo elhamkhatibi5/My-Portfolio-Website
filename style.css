@@ -26,7 +26,6 @@ body {
   padding: 1rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  
   align-items: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -235,6 +234,15 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* ====== About Text اصلاح شده ====== */
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
 /* ====== Media Queries ====== */
 @media (max-width: 720px) {
   .hero h1 { font-size: 1.7rem; }
@@ -269,40 +277,3 @@ html {
 .special-box {
   background-color: #ffcc00;
   color: #333;
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* ====== About Text (Fixed for alignment and width) ====== */
-#about p {
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto;
-  color: inherit;
-}
-
-/* ====== Footer extra styles ====== */
-.footer {
-  background-color: #f9f9f9;
-  padding: 20px 0 10px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-}
-
-.social-icons {
-  margin-bottom: 10px;
-}
-
-.social-icons i {
-  font-size: 24px;
-  color: #555;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.social-icons i:hover {
-  color
