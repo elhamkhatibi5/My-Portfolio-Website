@@ -278,7 +278,7 @@ html {
 #about p {
   text-align: justify;
 }
-.footer {
+..footer {
   background-color: #f9f9f9;
   padding: 20px 0 10px;
   text-align: center;
