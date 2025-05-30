@@ -5,7 +5,7 @@ This portfolio website is inspired by a clean, professional, and minimalist desi
 
 ## Design Decisions
 - Used two Google Fonts: Poppins headings (modern and bold) and Open Sans-Serif for body text (readable and clean).
-- Color scheme is calm and professional with navy blue (#004d99) as primary color for navigation and accents.Dark Slate gray and white color.
+- Color scheme is calm and professional with navy blue (#004d99) as primary color for navigation and accents.Dark Slate gray and blue and green color.
 - Responsive grid layout for projects using CSS Grid.
 - Hover effects on navigation links and project cards to improve interactivity.
 - Simple, semantic HTML structure for accessibility and SEO.
