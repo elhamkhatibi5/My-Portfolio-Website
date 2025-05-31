@@ -8,67 +8,78 @@
 /* ====== Body ====== */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #f4f4f4;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f0f0f5;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* ====== Navbar ====== */
 .navbar {
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 1rem 2.5rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 0 0 16px 16px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 20px 20px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .navbar .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #00e1ff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00e5ff;
   text-decoration: none;
+  letter-spacing: 1.1px;
+  user-select: none;
 }
 
 .navbar .nav-links {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .navbar .nav-links li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #eee;
   font-weight: 600;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  padding: 0.5rem 1.1rem;
+  border-radius: 12px;
+  transition: all 0.35s ease;
+  box-shadow: inset 0 0 0 0 transparent;
+  user-select: none;
 }
 
 .navbar .nav-links li a:hover,
 .navbar .nav-links li a.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: #00e1ff;
+  background: #00e5ff;
+  color: #0b1a26;
+  box-shadow: inset 0 0 8px #00e5ff;
 }
 
 /* ====== Hero Section ====== */
 .hero {
   text-align: center;
-  margin: 2rem auto;
+  margin: 3rem auto 1.5rem;
   max-width: 1100px;
   width: 100%;
 }
@@ -78,7 +89,8 @@ body {
   width: 220px;
   height: 220px;
   position: relative;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 2rem;
+  filter: drop-shadow(0 0 10px #00e5ff);
 }
 
 .profile-pic-container::before {
@@ -89,10 +101,15 @@ body {
   width: 100%;
   height: 100%;
   border: 6px solid transparent;
-  border-top: 6px solid #00e1ff;
+  border-top: 6px solid #00e5ff;
   border-radius: 50%;
-  animation: spin 4s linear infinite;
-  box-shadow: 0 0 20px #00e1ff;
+  animation: spin 6s linear infinite;
+  box-shadow: 0 0 30px #00e5ff;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-pic-container:hover::before {
+  box-shadow: 0 0 45px #00e5ff;
 }
 
 .profile-pic {
@@ -101,158 +118,145 @@ body {
   object-fit: cover;
   border-radius: 50%;
   margin: 4%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic-container:hover .profile-pic {
+  transform: scale(1.05);
 }
 
 /* ====== Keyframes ====== */
 @keyframes spin {
-  0% { transform: rotate(0); }
+  0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
 /* ====== Hero Text ====== */
 .hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.6rem;
+  margin-bottom: 0.8rem;
   color: #ffffff;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 8px #00e5ff88;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  color: #dddddd;
-  max-width: 700px;
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  max-width: 720px;
   margin: 0 auto;
+  line-height: 1.55;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 /* ====== Portfolio Section ====== */
 .portfolio-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
   width: 100%;
   max-width: 1100px;
 }
 
 /* ====== Project Card ====== */
 .project {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  border-radius: 12px;
-  padding: 1.5rem;
+  background: linear-gradient(145deg, #1f3a70, #274b9b);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
   text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  cursor: default;
+  user-select: none;
 }
 
 .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+  transform: translateY(-14px) scale(1.03);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.6);
 }
 
 .project img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border-radius: 14px;
+  margin-bottom: 1.3rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.05);
 }
 
 .project h2 {
-  font-size: 1.4rem;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #f0f0f5;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.8px;
 }
 
 .project p {
-  font-size: 0.95rem;
-  color: #e0e0e0;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+  user-select: text;
 }
 
 /* ====== Button ====== */
 .btn {
-  background-color: #00e1ff;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  background-color: #00e5ff;
+  color: #0b1a26;
+  padding: 0.7rem 1.4rem;
+  border-radius: 12px;
   display: inline-block;
   text-decoration: none;
-  margin-top: 1rem;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  margin-top: 1.3rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 18px #00e5ffaa;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
+  user-select: none;
 }
 
 .btn:hover {
-  background-color: #00c9e0;
+  background-color: #00c6e0;
+  box-shadow: 0 10px 26px #00c6e0cc;
 }
 
 /* ====== Footer ====== */
 footer {
   margin-top: auto;
   width: 100%;
-  padding: 1.2rem 2rem;
+  padding: 1.5rem 2.5rem;
   text-align: center;
-  background-color: rgba(20, 20, 20, 0.9);
-  color: #aaa;
+  background-color: rgba(20, 20, 20, 0.95);
+  color: #bbb;
   font-size: 0.9rem;
-  border-radius: 16px 16px 0 0;
+  border-radius: 20px 20px 0 0;
+  user-select: none;
+  letter-spacing: 0.5px;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
 /* ====== Contact Section ====== */
 .contact {
-  background-color: rgba(255, 255, 255, 0.04);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-top: 5rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+  margin-top: 6rem;
   max-width: 1100px;
   width: 100%;
   color: #eee;
-  line-height: 1.6;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.65;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
+  user-select: text;
 }
 
 .contact img {
-  max-width: 250px;
+  max-width: 280px;
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  margin-top: 1.5rem;
-}
-
-/* ====== About Section ====== */
-#about p {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.6;
-}
-
-/* ====== Social Icons ====== */
-.social-icons a {
-  color: #00e1ff !important;
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #00c9e0 !important;
-}
-
-/* ====== Responsive ====== */
-@media (max-width: 720px) {
-  .navbar { flex-direction: column; align-items: flex-start; }
-  .navbar .nav-links { flex-direction: column; width: 100%; }
-  .hero h1 { font-size: 1.7rem; }
-  .hero p { font-size: 1rem; }
-  .profile-pic-container { width: 180px; height: 180px; }
-  .portfolio-section { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 480px) {
-  body { padding: 1rem; }
-  .profile-pic-container { width: 150px; height: 150px; }
-  .hero h1 { font-size: 1.4rem; }
-  .btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
-  footer { font-size: 0.85rem; }
-}
+  border-radius: 14px;
+  box-shadow
