@@ -1,11 +1,11 @@
-/* ========== Reset ========== */
+/* ====== Reset ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ========== Body ========== */
+/* ====== Body ====== */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ========== Navbar ========== */
+/* ====== Navbar ====== */
 .navbar {
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
@@ -65,20 +65,20 @@ body {
   color: #00e1ff;
 }
 
-/* ========== Hero Section ========== */
+/* ====== Hero Section ====== */
 .hero {
   text-align: center;
-  margin: 3rem auto 2rem;
+  margin: 2rem auto;
   max-width: 1100px;
   width: 100%;
 }
 
-/* ========== Profile Image Ring ========== */
+/* ====== Profile Image Ring ====== */
 .profile-pic-container {
   width: 220px;
   height: 220px;
   position: relative;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.5rem;
 }
 
 .profile-pic-container::before {
@@ -106,15 +106,15 @@ body {
   z-index: 1;
 }
 
-/* ========== Animation ========== */
+/* ====== Keyframes ====== */
 @keyframes spin {
   0% { transform: rotate(0); }
   100% { transform: rotate(360deg); }
 }
 
-/* ========== Hero Text ========== */
+/* ====== Hero Text ====== */
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
   color: #ffffff;
 }
@@ -124,23 +124,22 @@ body {
   color: #dddddd;
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
 }
 
-/* ========== Portfolio Section ========== */
+/* ====== Portfolio Section ====== */
 .portfolio-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   width: 100%;
   max-width: 1100px;
 }
 
-/* ========== Project Card ========== */
+/* ====== Project Card ====== */
 .project {
   background: linear-gradient(135deg, #1e3c72, #2a5298);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
@@ -166,11 +165,11 @@ body {
 }
 
 .project p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #e0e0e0;
 }
 
-/* ========== Button ========== */
+/* ====== Button ====== */
 .btn {
   background-color: #00e1ff;
   color: #fff;
@@ -187,7 +186,7 @@ body {
   background-color: #00c9e0;
 }
 
-/* ========== Footer ========== */
+/* ====== Footer ====== */
 footer {
   margin-top: auto;
   width: 100%;
@@ -199,7 +198,7 @@ footer {
   border-radius: 16px 16px 0 0;
 }
 
-/* ========== Contact Section ========== */
+/* ====== Contact Section ====== */
 .contact {
   background-color: rgba(255, 255, 255, 0.04);
   border-radius: 12px;
@@ -220,7 +219,7 @@ footer {
   margin-top: 1.5rem;
 }
 
-/* ========== About Section ========== */
+/* ====== About Section ====== */
 #about p {
   max-width: 700px;
   margin: 0 auto;
@@ -228,11 +227,11 @@ footer {
   line-height: 1.6;
 }
 
-/* ========== Social Icons ========== */
+/* ====== Social Icons ====== */
 .social-icons a {
   color: #00e1ff !important;
   margin: 0 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
@@ -240,56 +239,20 @@ footer {
   color: #00c9e0 !important;
 }
 
-/* ========== Responsive Design ========== */
+/* ====== Responsive ====== */
 @media (max-width: 720px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar .nav-links {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .profile-pic-container {
-    width: 180px;
-    height: 180px;
-  }
-
-  .portfolio-section {
-    grid-template-columns: 1fr;
-  }
+  .navbar { flex-direction: column; align-items: flex-start; }
+  .navbar .nav-links { flex-direction: column; width: 100%; }
+  .hero h1 { font-size: 1.7rem; }
+  .hero p { font-size: 1rem; }
+  .profile-pic-container { width: 180px; height: 180px; }
+  .portfolio-section { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  body {
-    padding: 1rem;
-  }
-
-  .profile-pic-container {
-    width: 150px;
-    height: 150px;
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-
-  footer {
-    font-size: 0.85rem;
-  }
+  body { padding: 1rem; }
+  .profile-pic-container { width: 150px; height: 150px; }
+  .hero h1 { font-size: 1.4rem; }
+  .btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
+  footer { font-size: 0.85rem; }
 }
